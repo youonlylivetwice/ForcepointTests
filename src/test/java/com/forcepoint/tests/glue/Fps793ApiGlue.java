@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 
 import com.forcepoint.tests.strategy.CountryCodeVerifierContext;
 
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -25,18 +24,14 @@ public class Fps793ApiGlue {
 	private String page;
 	private String alias;
 	private CountryCodeVerifierContext context = new CountryCodeVerifierContext();
-
-	@Before("@api_automated and not @automated and not @release and not @wip and not @automated_api")
-	public void setUp() {
-		sutUrl = System.getProperty("sutUrl");
-		logger.info("Scenario setUp() - SUT Url defined in env. variable: " + sutUrl);
-		
-		request = given().contentType("application/json");
-	}
 	
 	@Given("the page {string}")
 	public void the_page(String page) {
 		logger.info("=========== Given step ===========");
+		sutUrl = System.getProperty("sutUrl");
+		logger.info("SUT Url defined in env. variable: " + sutUrl);
+		
+		request = given().contentType("application/json");
 		logger.info("page to validate: " + page);
 		this.page = page;
 	}
