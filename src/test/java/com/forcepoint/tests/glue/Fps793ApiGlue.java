@@ -28,7 +28,7 @@ public class Fps793ApiGlue {
 	@Given("the page {string}")
 	public void the_page(String page) {
 		logger.info("=========== Given step ===========");
-		sutUrl = System.getProperty("sutUrl");
+		sutUrl = "https://pr-793-2-forcepoint.pantheonsite.io";//System.getProperty("sutUrl");
 		logger.info("SUT Url defined in env. variable: " + sutUrl);
 		
 		request = given().contentType("application/json");

@@ -9,6 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources", 
 				 glue = "com.forcepoint.tests.glue",
+				 tags = {"@fps-793_api_"},
 				 plugin= {"io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"})
 public class TestAutomationRunner {
 
