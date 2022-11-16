@@ -22,7 +22,7 @@
 		<cucumber.version>4.8.1</cucumber.version>
 		<selenium.version>3.14.0</selenium.version>
 		<rest-assured.version>4.3.0</rest-assured.version>
-		<jackson.version>2.10.2</jackson.version>
+		<jackson.version>2.12.7.1</jackson.version>
 		<allure.version>2.13.3</allure.version>
 	</properties>
 
